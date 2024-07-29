@@ -14,6 +14,10 @@ const Section=styled.div`
   background-attachment:fixed;
    background-position: center;
   background-size: auto;
+  @media only screen and (min-width: 600px) {
+ height:100vh;
+
+}
   height:100vh;
 `
 
@@ -21,7 +25,7 @@ export default function HomePage() {
   return (
       <Section  className="">
         <Nav />
-        <div className="md:mx-40 mx-2 text-white  flex flex-col gap-5 md:gap-2 mt-16 mb-10 md:mb-0 ">
+        <div className="md:mx-20 mx-2 text-white  flex flex-col gap-7 md:gap-2 mt-20 mb-10 md:mb-0 ">
             <p className="md:text-4xl text-2xl font-serif font-medium">WELCOME TO</p>
             <h1 className="md:text-9xl text-7xl font-serif font-bold">LUXURY</h1>
             <h1 className="md:text-6xl text-4xl font-serif font-semibold">HOTELS</h1>
