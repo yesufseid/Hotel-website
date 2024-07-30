@@ -9,9 +9,9 @@ type Props={
 
 export default function Gallery({url,text}:Props) {
   return (
-    <div className="  relative flex flex-col justify-center mx-20 my-20 h-screen  ">
-       <Image   src={url}  alt="img" height={400} width={400} className="w-full h-full"  />
-       <h1 className="w-40 py-2 text-black  absolute bottom-0 bg-white left-[500px] text-center font-sans ">{text}</h1>
+    <div className="  relative flex flex-col justify-center md:mx-20 my-5 md:my-20 md:h-screen  ">
+       <Image   src={url}  alt="img" height={600} width={400} className="w-full md:h-full h-[500px] opacity-100"  />
+       <h1 className="w-40 py-2 text-black  absolute bottom-0 bg-white md:left-[500px] left-[110px] text-center font-sans ">{text}</h1>
     </div>
   )
 }
