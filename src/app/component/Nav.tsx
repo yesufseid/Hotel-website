@@ -2,7 +2,7 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import Menu from "./menu"
 
-const link=[{'name':'Home','link':'/'},{'name':'Facilties','link':'/Facilties'},{'name':'Rooms','link':'/Rooms'},
+const link=[{'name':'Home','link':'/'},{'name':'Facilties','link':'/facilities'},{'name':'Rooms','link':'/Rooms'},
     {'name':'Contact-Us','link':'/Contact-Us'}]
 export default function Nav() {
    const pathname=usePathname()
@@ -16,7 +16,7 @@ export default function Nav() {
             {link.map((links)=>{
                 return(
                    <Link  className={`link ${pathname === links.link ? 'underline  text-white font-serif font-semibold  ' : 'text-white font-serif font-semibold'}`}
-                    href={"/"}   >{links.name}</Link>
+                    href={links.link}   >{links.name}</Link>
                 )
             })} 
         </div> 
