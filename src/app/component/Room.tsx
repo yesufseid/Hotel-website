@@ -56,7 +56,7 @@ export default function Room({url,text}:Props) {
       <Slider {...settings}>
        {url.map((m)=>{
         return(
-          <Image   src={m}  alt="img" height={600} width={400} 
+          <Image key={m}   src={m}  alt="img" height={600} width={400} 
           className="w-full md:h-[500px] h-[500px] blur-none brightness-100 contrast-100 saturate-150"  /> 
         )
        })}

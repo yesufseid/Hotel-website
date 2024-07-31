@@ -16,7 +16,7 @@ export default function page() {
         </div>
          {Img.map((I)=>{
             return(
-                <Room   url={I.url} text={I.name} />
+                <Room  key={I.name}  url={I.url} text={I.name} />
             )
          })}
     </>

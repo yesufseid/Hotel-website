@@ -17,7 +17,7 @@ export default function Nav() {
         <div className="hidden   md:flex gap-10 ">
             {link.map((links)=>{
                 return(
-                   <Link scroll={false}  className={`link ${pathname === links.link ? 'underline  text-white font-serif font-semibold  ' : 'text-white font-serif font-semibold'}`}
+                   <Link scroll={false} key={links.name}  className={`link ${pathname === links.link ? 'underline  text-white font-serif font-semibold  ' : 'text-white font-serif font-semibold'}`}
                     href={links.link}   >{links.name}</Link>
                 )
             })} 

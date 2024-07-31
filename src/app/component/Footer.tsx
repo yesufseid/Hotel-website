@@ -65,9 +65,9 @@ export default function Footer() {
       <Slider {...settings}>
        {[1,2,3].map((m)=>{
         return(
-            <div className="text-center flex flex-col justify-center gap-2 text-black">
-            <h1 className="text-3xl font-serif ">"Calm,sento,rento-what awaye of relaxe"</h1>
-            <p>mr,and mr's baxon uk</p>
+            <div key={m} className="text-center flex flex-col justify-center gap-2 text-black">
+            <q className="text-3xl font-serif ">Calm,sento,rento-what awaye of relaxe</q>
+            <p>mr,and mr&apos;s baxon uk</p>
            </div>
         )
        })}

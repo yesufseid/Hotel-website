@@ -25,7 +25,7 @@ export default function Menu() {
         <div className="bg-white flex flex-col justify-center gap-10  w-[320px] h-full">
      {link.map((links)=>{
                 return(
-                   <Link scroll={false}  onClick={()=>setOpen(false)} className="border-2 w-32 mx-auto rounded-lg text-center  font-semibold border-logo hover:bg-logo px-2 py-2" 
+                   <Link key={links.name} scroll={false}  onClick={()=>setOpen(false)} className="border-2 w-32 mx-auto rounded-lg text-center  font-semibold border-logo hover:bg-logo px-2 py-2" 
                     href={links.link}   >{links.name}</Link>
                 )
             })}

@@ -17,7 +17,7 @@ export default function page() {
         </div>
          {Img.map((I)=>{
             return(
-                <Gallery   url={I.url} text={I.name} />
+                <Gallery  key={I.name}  url={I.url} text={I.name} />
             )
          })}
     </>
