@@ -1,23 +1,71 @@
 "use client"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import Image from "next/image"
 import { CgDollar } from "react-icons/cg";
 import { GiCrossedPistols } from "react-icons/gi";
+import { useState } from "react";
 
 
 type Props={
-    url:string
+    url:string[]
     text:string
 }
 
 
 export default function Room({url,text}:Props) {
+  const [slide,setSlide]=useState(0)
+  var settings = {
+    autoplay:false,
+     speed: 300,
+     autoplaySpeed: 8000,
+     cssEase: "linear",
+     dots:true,
+     infinite: true,
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     swipeToSlide: true,
+     afterChange:(i:any)=>(
+          setSlide(i)
+     ),
+    customPaging: (i:any)=> (
+    <div
+      className={` ${slide===i&&"bg-logo"} w-4 h-4 rounded-full border-[1px] border-logo absolute bottom-10  `}
+      >
+      </div> 
+    ),
+     responsive: [
+       {
+         breakpoint:600,
+         settings: {
+           autoplay:false,
+              speed: 300,
+          autoplaySpeed: 8000,
+            cssEase: "linear",
+           slidesToShow:1,
+           slidesToScroll:1,
+           infinite: true,
+           dots:true,
+           swipeToSlide: true,
+         }
+   }]
+   };
   return (
-    <div className=" flex flex-col justify-center md:mx-20 my-5 md:my-20 md:h-screen  ">
-       <Image   src={url}  alt="img" height={600} width={400} className="w-full md:h-[500px] h-[500px] opacity-100"  />
+    <div className=" relative flex flex-col justify-center md:mx-20 my-5 md:my-20 md:h-screen  ">
+      <Slider {...settings}>
+       {url.map((m)=>{
+        return(
+          <Image   src={m}  alt="img" height={600} width={400} 
+          className="w-full md:h-[500px] h-[500px] blur-none brightness-100 contrast-100 saturate-150"  /> 
+        )
+       })}
+     
+      </Slider>
        <h1 className="py-2 text-white  bg-blue-950 text-2xl font-serif  text-center font-medium ">{text}</h1>
        <div className="w-full h-20  border-2 border-slate-600  flex items-center ">
                <div className="md:mx-20 mx-2 flex justify-between w-full">
-                    <p className="text-blue-950 flex items-center cursor-pointer" ><GiCrossedPistols className=" text-white mr-5  w-8 h-8 bg-logo p-1 rounded-full" />View Room details</p>
+                    <p className="text-blue-950 flex items-center cursor-pointer" ><GiCrossedPistols className=" text-white mr-1 md:mr-5  w-8 h-8 bg-logo p-1 rounded-full" />View Room details</p>
                     <button className="py-2 text-white bg-logo rounded-md cursor-pointer flex items-center px-2"><span className="flex items-center mr-5"><CgDollar />155</span>Avg/night</button>
                </div>
        </div>
