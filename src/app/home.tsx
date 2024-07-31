@@ -9,12 +9,12 @@ import { usePathname } from 'next/navigation'
 
 
 
-const Section=styled.div`
-  background-image:url("/7.jpeg");
-  background-repeat: no-repeat;
+const Section=styled.div<{$path:string}>`
+  background-image:url(${props=>props.$path==="/"?"/5.jpeg":props.$path==="/facilities"? "/16.jpg":"/15.jpg"});
+  background-repeat:repeat;
   background-attachment:fixed;
-   background-position: center;
-  background-size: auto;
+   background-position:center;
+  background-size:cover;
   @media only screen and (min-width: 600px) {
  height:100vh;
 
@@ -25,7 +25,7 @@ const Section=styled.div`
 export default function HomePage() {
   const pathname = usePathname()
   return (
-      <Section hidden={pathname==="/contact-us"} >
+      <Section  $path={pathname}  hidden={pathname==="/contact-us"} >
         <Nav />
         <div className="md:mx-20 mx-2 text-white  flex flex-col gap-7 md:gap-2 mt-20 mb-10 md:mb-0 ">
             <p className="md:text-4xl text-2xl font-serif font-medium">WELCOME TO</p>

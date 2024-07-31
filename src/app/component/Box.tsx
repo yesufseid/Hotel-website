@@ -12,7 +12,7 @@ export default function Box({url,title,text}:Props) {
   return (
     <div className="md:flex justify-between md:mx-20 my-5 items-center ">
         <div className="order-last" >
-        <Image src={url} height={500} width={700} alt="img" className="h-64" />
+        <Image src={url} height={500} quality={100} width={700} alt="img" className="h-64  " />
         </div>
         <div className="flex w-96 items-center  ">
             <hr className="w-0.5 h-48 bg-slate-600 mx-2 md:mr-12 " />
