@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation'
 
 
 const Section=styled.div<{$path:string}>`
-  background-image:url(${props=>props.$path==="/"?"/5.jpeg":props.$path==="/facilities"? "/16.jpg":"/15.jpg"});
+  background-image:url(${props=>props.$path==="/"?"/5.jpeg":props.$path==="/facilities"? "/16.jpg":"/3.jpg"});
   background-repeat:repeat;
   background-attachment:fixed;
    background-position:center;
