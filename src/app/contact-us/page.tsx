@@ -16,7 +16,7 @@ export default function page() {
      </p>
      </div>
      <div className="md:mx-20 mx-2 md:flex justify-between text-2xl font-serif  " >
-         <div>
+         <div className="hidden  md:flex flex-col" >
              <p className="flex items-center">497 Evergreen Rd. Roseville, <br />
               CA95673</p>
               <Link href={"#"} className="flex items-center gap-2 my-3" >Veiw map <IoIosArrowRoundUp className="w-14 h-14 rotate-90" /> </Link>

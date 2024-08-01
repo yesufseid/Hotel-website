@@ -52,12 +52,20 @@ export default function Room({url,text}:Props) {
    }]
    };
   return (
-    <div className=" relative flex flex-col justify-center md:mx-20 my-5 md:my-20 md:h-screen  ">
+    <div className=" relative flex flex-col justify-center md:mx-20 my-5 md:my-20 md:h-screen ">
       <Slider {...settings}>
        {url.map((m)=>{
         return(
-          <Image key={m}   src={m}  alt="img" height={600} width={400} 
-          className="w-full md:h-[500px] h-[500px] blur-none brightness-100 contrast-100 saturate-150"  /> 
+          <Image key={m} 
+          quality={100}
+          style={{
+              width: '100%',
+              height: '100%',
+            objectFit: 'cover', // cover, contain, none
+          }}
+          src={m}  alt="img" width={500} height={500}
+          className="w-full md:h-[500px] h-[500px]"  
+          /> 
         )
        })}
      

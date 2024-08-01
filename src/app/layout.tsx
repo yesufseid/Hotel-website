@@ -8,10 +8,13 @@ import Footer from "./component/Footer"
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Luxury",
-  description: "luxury hotel that found in the heart of addis ababa",
-};
+  openGraph: {
+    title: "Luxury",
+    description: "best hotel in welkite",
+  },
+}
 
 export default function RootLayout({
   children,

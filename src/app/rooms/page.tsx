@@ -1,6 +1,12 @@
 import Room from "../component/Room"
 
-
+export const metadata = {
+  title: 'Rooms',
+  openGraph: {
+    title: 'Rooms',
+    description: "best hotel rooms in welkite",
+  },
+}
 
 const Img=[{name:'SINGLE ROOM',url:['/13.jpg','/4.jpg','/14.jpg']},{name:'DOBULE ROOM',url:['/4.jpg','/13.jpg','/14.jpg']},
     {name:'TWIN ROOM',url:['/14.jpg','/13.jpg','/4.jpg']}]

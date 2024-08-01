@@ -1,6 +1,12 @@
 import Gallery from "../component/Gallery"
 
-
+export const metadata = {
+  title: 'facilities',
+  openGraph: {
+    title: 'facilities',
+    description: "best bar in welkite",
+  },
+}
 
 const Img=[{name:'THE GYM',url:'/8.jpg'},{name:'POOLSIDE BAR',url:'/6.jpg'},
     {name:'THE SPA',url:'/12.jpg'},{name:'SWIMMING POOL',url:'/10.jpg'},
