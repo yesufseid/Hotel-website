@@ -10,7 +10,7 @@ export const metadata = {
 
 const Img=[{name:'THE GYM',url:'/8.jpg'},{name:'POOLSIDE BAR',url:'/6.jpg'},
     {name:'THE SPA',url:'/12.jpg'},{name:'SWIMMING POOL',url:'/10.jpg'},
-    {name:'RESTAURANT',url:'/11.jpg'},{name:'LAUNDRY',url:'/9.jpg'}]
+    {name:'RESTAURANT',url:'/20.jpg'},{name:'LAUNDRY',url:'/9.jpg'}]
 export default function page() {
   return (
     <>
