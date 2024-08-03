@@ -1,0 +1,21 @@
+
+
+type props={
+    title:string
+    list:string[]
+}
+
+export default function card({title,list}:props) {
+  return (
+    <div className="w-fit h-fit md:ml-20   ">
+       <h1  className="text-3xl font-semibold mb-3" >{title}</h1>
+       <ol>
+        {list.map((l)=>{
+            return (
+                <li className="flex items-center" ><div className="w-2 h-2 bg-black rounded-full mr-3"></div>{l}</li>
+        )
+        })}
+       </ol>
+    </div>
+  )
+}

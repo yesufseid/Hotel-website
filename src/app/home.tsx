@@ -22,10 +22,11 @@ const Section=styled.div<{$path:string}>`
   height:100vh;
 `
 
+
 export default function HomePage() {
   const pathname = usePathname()
   return (
-      <Section  $path={pathname}  hidden={pathname==="/contact-us"} >
+      <Section  $path={pathname}  hidden={pathname === "/contact-us" ||pathname==="/booking"} >
         <Nav />
         <div className="md:mx-20 mx-2 text-white  flex flex-col gap-7 md:gap-2 mt-20 mb-10 md:mb-0 ">
             <p className="md:text-4xl text-2xl font-serif font-medium">WELCOME TO</p>

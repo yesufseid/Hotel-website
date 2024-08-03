@@ -18,10 +18,10 @@ const link=[{name:'Home',link:'/'},{name:'Facilties',link:'/facilities'},{name:'
 export default function Menu() {
     const [open,setOpen]=useState(false)
   return (
-    <Section className="w-fit flex md:hidden  overflow-scroll  " >
+    <Section className="w-fit flex md:hidden  overflow-scroll   " >
         {open?<GiCrossMark className="w-10 h-10 text-white z-50" onClick={()=>setOpen(false)} /> :<RiMenu3Line className="w-10 h-10 text-white" onClick={()=>setOpen(true)}  />}     
     
-     <div className={`absolute top-0 left-0 w-full h-full overflow-y-auto bg-transparent  ${open?'translate-x-0 transition-all duration-300':'-translate-x-[320px] transition-all duration-300'}`}>
+     <div className={`absolute top-0 left-0 w-full z-20 h-full overflow-y-auto bg-transparent  ${open?'translate-x-0 transition-all duration-300':'-translate-x-[320px] transition-all duration-300'}`}>
         <div className="bg-white flex flex-col justify-center gap-10  w-[320px] h-full">
      {link.map((links)=>{
                 return(

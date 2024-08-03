@@ -17,7 +17,7 @@ export default function Box({url,title,text}:Props) {
            width={500} height={400}
        alt="img"   className="md:h-60 md:w-[600px]  w-full "  />
         </div>
-        <div className="flex w-96 items-center  ">
+        <div className="flex  w-full md:w-96 items-center  ">
             <hr className="w-0.5 h-48 bg-slate-600 mx-2 md:mr-12 " />
             <div className="flex flex-col gap-1">
                <h1 className="text-3xl font-sans font-semibold mb-1">{title}</h1>
