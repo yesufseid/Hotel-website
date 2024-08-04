@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import Image from "next/image"
 import { CgDollar } from "react-icons/cg";
 import { GiCrossedPistols } from "react-icons/gi";
-import { useState } from "react";
+import { useState} from "react";
 import Link from "next/link";
 
 
@@ -74,7 +74,7 @@ export default function Room({url,text}:Props) {
       <h1 className="py-2 text-white  bg-blue-950 text-2xl font-serif  text-center font-medium ">{text}</h1>
        <div className="w-full h-20  border-2 border-slate-600  flex items-center ">
                <div className="md:mx-20 mx-2 flex justify-between w-full">
-                    <Link  scroll={false} href={{pathname:"/booking",query: {text:text,url:url},}}    className="text-blue-950 flex items-center cursor-pointer" ><GiCrossedPistols className=" text-white mr-1 md:mr-5  w-8 h-8 bg-logo p-1 rounded-full" />View Room details</Link>
+                    <Link  scroll={true} href={{pathname:"/booking",query: {text:text,url:url},}}    className="text-blue-950 flex items-center cursor-pointer" ><GiCrossedPistols className=" text-white mr-1 md:mr-5  w-8 h-8 bg-logo p-1 rounded-full" />View Room details</Link>
                     <button className="py-2 text-white bg-logo rounded-md cursor-pointer flex items-center px-2"><span className="flex items-center mr-5"><CgDollar />155</span>Avg/night</button>
                </div>
        </div>

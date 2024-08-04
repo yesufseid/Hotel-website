@@ -8,7 +8,7 @@ type props={
 export default function Card({title,list}:props) {
   return (
     <div className="w-fit h-fit md:ml-20   ">
-       <h1  className="text-3xl font-semibold mb-3" >{title}</h1>
+       <h1  className="md:text-3xl text-2xl font-semibold mb-3" >{title}</h1>
        <ol>
         {list.map((l)=>{
             return (

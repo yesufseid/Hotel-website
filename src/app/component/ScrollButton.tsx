@@ -1,12 +1,17 @@
 "use client"
 
-import {useState} from 'react'; 
-import { Button } from './Style'; 
+import {useState,useEffect} from 'react'; 
 import { IoIosArrowUp } from "react-icons/io";
 
 
 const ScrollButton = () =>{ 
 const [visible, setVisible] = useState(false) 
+
+
+useEffect(()=>{
+	window.addEventListener('scroll', toggleVisible); 
+},[])
+
 
 const toggleVisible = () => { 
 	const scrolled = document.documentElement.scrollTop;
@@ -24,16 +29,12 @@ const scrollToTop = () =>{
 	behavior: 'smooth'
 	}); 
 }; 
-if (typeof window !== "undefined") {
-window.addEventListener('scroll', toggleVisible); 
-}
 return ( 
-	<Button > 
 	<IoIosArrowUp
-	className='bg-black rounded-full' onClick={scrollToTop}
+	className='bg-black rounded-full fixed bottom-10 right-10  text-white w-10 h-10 cursor-pointer z-50 ' onClick={scrollToTop}
 	style={{display: visible ? 'inline' : 'none'}} /> 
-	</Button> 
 ); 
 } 
 
 export default ScrollButton; 
+ 

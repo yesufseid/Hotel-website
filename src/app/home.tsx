@@ -2,7 +2,8 @@
 
 import styled from "styled-components";
 import Nav from "./component/Nav";
-import Button,{Scroll} from "./component/Buttons"
+import Button from "./component/Buttons"
+import { Scroll } from "./component/Scroll";
 import { FaCalendarCheck } from "react-icons/fa";
 import { usePathname } from 'next/navigation'
 
@@ -10,7 +11,7 @@ import { usePathname } from 'next/navigation'
 
 
 const Section=styled.div<{$path:string}>`
-  background-image:url(${props=>props.$path==="/"?"/5.jpeg":props.$path==="/facilities"? "/16.jpg":"/3.jpg"});
+  background-image:url(${props=>props.$path==="/"?"/5.jpg":props.$path==="/facilities"? "/16.jpg":"/3.jpg"});
   background-repeat:repeat;
   background-attachment:fixed;
    background-position:center;
@@ -34,7 +35,7 @@ export default function HomePage() {
             <h1 className="md:text-6xl text-4xl font-serif font-semibold">HOTELS</h1>
             <p className="text-sm font-serif font-light">book your stay and enjoy luxury <br />redefined the most affordeble rates.</p>
         </div> 
-         <Button path="/" text="Book Now" icon={<FaCalendarCheck className="text-white h-6 w-6" />} />
+         <Button  path="/rooms" text="Book Now" icon={<FaCalendarCheck className="text-white h-6 w-6" />} />
          <Scroll />
       </Section>
   );
