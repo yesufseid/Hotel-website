@@ -12,7 +12,7 @@ export default function card({title,list}:props) {
        <ol>
         {list.map((l)=>{
             return (
-                <li className="flex items-center" ><div className="w-2 h-2 bg-black rounded-full mr-3"></div>{l}</li>
+                <li key={l} className="flex items-center" ><div className="w-2 h-2 bg-black rounded-full mr-3"></div>{l}</li>
         )
         })}
        </ol>

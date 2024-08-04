@@ -26,9 +26,9 @@ const data=[{title:"Accessibility",
                     'Sitting area']
             }       
                 ]
-
 export default function page() {
-    const searchParams = useSearchParams()
+  const searchParams = useSearchParams()
+
   return (
     <>
     <div className="bg-blue-950 pb-5" >
@@ -38,7 +38,7 @@ export default function page() {
    <div  className="grid mx-2  grid-cols-2 md:grid-cols-3 gap-2 md:gap-10" >
    {data.map((d)=>{
     return (
-        <Card title={d.title}  list={d.list} />
+        <Card  key={d.title} title={d.title}  list={d.list} />
     )
    })}
    </div> 
