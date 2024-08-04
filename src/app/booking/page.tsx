@@ -26,7 +26,7 @@ const data=[{title:"Accessibility",
                     'Sitting area']
             }       
                 ]
-export default function page() {
+export default function Page() {
   const searchParams = useSearchParams()
 
   return (
