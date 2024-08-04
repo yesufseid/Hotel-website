@@ -1,9 +1,9 @@
-'use client'
 
-import Room from "../component/Room"
-import { useSearchParams } from 'next/navigation'
 import Nav from "../component/Nav"
-import Card from "./card"
+import Card from "../component/card"
+import RoomReturn from "../component/RoomReturn"
+import { Suspense } from "react"
+
 
 
 const data=[{title:"Accessibility",
@@ -27,14 +27,18 @@ const data=[{title:"Accessibility",
             }       
                 ]
 export default function Page() {
-  const searchParams = useSearchParams()
+  function SearchBarFallback() {
+    return <>placeholder</>
+  }
 
   return (
     <>
     <div className="bg-blue-950 pb-5" >
     <Nav />
     </div>
-   <Room  url={searchParams.getAll("url")} text={searchParams.get('text')||"loading" }  />
+   <Suspense fallback={<SearchBarFallback />} >
+    <RoomReturn />
+   </Suspense>
    <div  className="grid mx-2  grid-cols-2 md:grid-cols-3 gap-2 md:gap-10" >
    {data.map((d)=>{
     return (

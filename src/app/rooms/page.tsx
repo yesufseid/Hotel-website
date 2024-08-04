@@ -10,7 +10,7 @@ export const metadata = {
 
 const Img=[{name:'SINGLE ROOM',url:['/13.jpg','/4.jpg','/14.jpg']},{name:'DOBULE ROOM',url:['/4.jpg','/13.jpg','/14.jpg']},
     {name:'TWIN ROOM',url:['/14.jpg','/13.jpg','/4.jpg']}]
-export default function page() {
+export default function Page() {
   return (
     <>
         <div className="md:mx-20 mx-2">

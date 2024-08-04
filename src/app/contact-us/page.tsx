@@ -2,7 +2,7 @@ import Nav from "../component/Nav"
 import Link from "next/link"
 import { IoIosArrowRoundUp } from "react-icons/io";
 
-export default function page() {
+export default function Page() {
   return (
     <>
      <div className="bg-blue-950" >

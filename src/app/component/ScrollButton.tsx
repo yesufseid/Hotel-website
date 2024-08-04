@@ -24,9 +24,9 @@ const scrollToTop = () =>{
 	behavior: 'smooth'
 	}); 
 }; 
-
+if (typeof window !== "undefined") {
 window.addEventListener('scroll', toggleVisible); 
-
+}
 return ( 
 	<Button > 
 	<IoIosArrowUp
