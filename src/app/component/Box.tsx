@@ -23,7 +23,7 @@ export default function Box({url,title,text}:Props) {
                <h1 className="text-3xl font-sans font-semibold mb-1">{title}</h1>
                <p className="font-sans font-semibold">{text}</p>
                <div className="w-fit mt-0">
-               <Buttons text="EXPLORE" path="@" />
+               <Buttons text="EXPLORE" path="#" />
                </div> 
              </div>
         </div>

@@ -16,6 +16,7 @@ const Section=styled.div<{$path:string}>`
   background-attachment:fixed;
    background-position:center;
   background-size:cover;
+  background-color:black;
   @media only screen and (min-width: 600px) {
  height:100vh;
 
